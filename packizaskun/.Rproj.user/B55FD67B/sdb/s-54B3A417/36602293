@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"Preparación de datos con R: ejercicios\"\nauthor: \"Carlos J. Gil Bellosta\"\ndate: \"2015-05-24\"\noutput: html_document\n---\n\n```{r setup, include=FALSE}\nlibrary(knitr)\nknitr::opts_chunk$set(echo = TRUE)\n```\n\n## Ejercicio extra (2 puntos)\n\nCrea un paquete de R con dos o tres funciones tontas. Una de ellas tiene que llamarse `suma.dos.numeros` y tiene que aceptar dos parámetros: los números que quieres sumar. Luego súbelo a Github.\n\nPara puntuar en este ejercicio, me tienes que pasar una versión del siguiente código,\n\n```{r, eval=FALSE}\nlibrary(devtools)\ninstall_github(\"IzaskunLS/Paquete-R---Practica-U-TAD/packizaskun\", type='source')\nlibrary(\"nombre del paquete\")\nsuma.dos.numeros(2, 2)\nsuma.dos.numeros(2, 5)\n?suma.dos.numeros\nremove.packages(\"nombre del paquete\")\n```\n\nque instale tu paquete, ejecute lo que me interesa y lo elimine después.\n\n\nLos puntos se asignarán así:\n\n* Que el paquete se instale sin problemas: 0.5 puntos\n* Que la función anterior se ejecute correctamente: 0.5 puntos\n* Que la función esté correctamente documentada: 0.5 puntos\n* Que los ejemplos de la ayuda del paquete se ejecuten correctamente: 0.5 puntos\n\n#Creamos un paquete llamado packizaskun\n\n  - DOCUMENTO GUIA: [informacion](http://www.ub.edu/stat/docencia/Cursos-R/Radvanced/materials/Crear_paquetes_R.pdf)\n\nA. Creamos las funciones que componen el paquete\n\n```{r, crear un paquete: funciones}\n\n suma.dos.numeros <- function(x, y){\n      resultado <- x + y\n      return(resultado)\n }\n \n  suma.tres.numeros <- function(x, y, z){\n      resultado <- x + y + z\n      return(resultado)\n }\n \n  resta.dos.numeros <- function(x, y){\n      resultado <- x - y\n      return(resultado)\n }\n\n```\n\nB. Creamos el paquete y sus directorios de ayuda\n\n```{r, crear un paquete: crear paquete}\n\npackage.skeleton(\"packizaskun_vs0\", list = c(\"suma.dos.numeros\", \"suma.tres.numeros\", \"resta.dos.numeros\"))\n\n```\n\nC. Con el editor de textos modificamos el fichero Descripci?n.\nD. Actualizamos la informaci?n sobre el paquete y las funciones en la carpeta MAD\n",
+    "created" : 1483622354088.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2751820639",
+    "id" : "36602293",
+    "lastKnownWriteTime" : 1483621593,
+    "last_content_update" : 1483622426250,
+    "path" : "F:/u_tad/R/02 preparacion_datos_r/00 Practica/src/crear un paquete.Rmd",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
